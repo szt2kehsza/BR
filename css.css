@@ -1,0 +1,198 @@
+body {
+    color: black !important;
+}
+
+
+/* Fejléc stílusok */
+
+.container{
+    display: flex;
+}
+
+.container  div:first-child{
+    margin-right: auto;
+}
+
+
+header {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 10px;
+    background-color: black;
+}
+
+
+.logo img {
+    width: 250px; 
+
+}
+
+.menuIcon{
+    padding: 5px;
+    margin: 15px;
+}
+
+.menuIcon span {
+    color: white;
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+}
+  
+.menuIcon span::after {
+    content: '';
+    position: absolute;
+    left: 0;
+    bottom: -2px;
+    width: 100%;
+    height: 1px;
+    background-color: white;
+    transform: scaleX(0);
+    transition: transform 0.3s ease;
+}
+  
+.menuIcon:hover span::after {
+    transform: scaleX(1);
+}
+  
+  
+  
+.menu {
+    display: none;
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+  
+.closeBtn {
+    font-size: 24px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    color: white;
+}
+  
+
+.search input {
+    margin: 15px;
+    padding: 5px;
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+}
+
+/* Navbar stílusok */
+
+.flex-container {
+    display: flex;
+    justify-content: center;
+    background-color: orange;
+    width: 100%;
+    padding: 15px;
+}
+  
+.flex-container div {
+    padding: 10px;
+    font-weight: bold;
+    border: 1px solid black;
+    border-top: 0px;
+    border-bottom: 0px;
+    width: 10.1%;
+    text-align: center;
+}
+
+.menuPontok{
+    text-decoration: none;
+    position: relative;
+    cursor: pointer;
+    color: black;
+}
+
+.menuPontok:hover{
+    color: white; 
+
+}
+
+
+.city-dropdown select {
+    padding: 5px;
+    margin: 10px 0;
+}
+
+
+
+
+.filmKepek{
+    width: 200px;
+}
+
+.movie-cards{
+    margin-left: 25%;
+    margin-right: 25%;
+}
+
+/* footer */
+footer{
+    background-color: black;
+    color: white;
+    width: 100%;
+}
+.footerContainer{
+    padding-top: 30px;
+    padding-bottom: 70px;
+    display: flex;
+    justify-content: center;
+    margin: 0 auto;
+}
+
+
+
+/* hamburger menu */
+
+@media (width <= 1450px) {
+    .flex-container div {
+        width: 15.1%;
+    }
+}
+
+@media (width <= 970px) {
+    .flex-container div {
+        font-size: 15px;
+    }
+}
+
+@media (width <= 925px) {
+    .flex-container div {
+        font-size: 12px;
+    }
+}
+
+@media (width <= 990px) {
+    .footerContainer{
+        margin: 0 auto;
+    }
+}
+
+@media (width <= 770px) {
+    .flex-container{
+        display: none;
+    }
+    .menuIcon{
+        display: none;
+    }
+    .search{
+        display: none;
+    }
+    /* .hamburger-menu{
+        display: flex;
+    } */
+}
+
+
+
+
