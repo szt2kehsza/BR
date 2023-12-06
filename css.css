@@ -147,7 +147,6 @@ footer{
     padding-bottom: 70px;
     display: flex;
     justify-content: center;
-    margin: 0 auto;
 }
 
 
@@ -174,7 +173,8 @@ footer{
 
 @media (width <= 990px) {
     .footerContainer{
-        margin: 0 auto;
+        padding-left: 25%;
+        padding-right: 25%;
     }
 }
 
