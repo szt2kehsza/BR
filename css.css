@@ -12,6 +12,7 @@ body {
 
 .container  div:first-child{
     margin-right: auto;
+    max-width: none;
 }
 
 
@@ -24,7 +25,7 @@ header {
 }
 
 
-.logo img {
+.logoKep {
     width: 250px; 
 
 }
@@ -126,15 +127,71 @@ header {
 }
 
 
-
-
-.filmKepek{
+.filmKep{
     width: 200px;
+    border-radius: 5px;
 }
 
-.movie-cards{
-    margin-left: 25%;
+.filmKepek{
+    margin: 10px;
+    cursor: pointer;
+}
+
+.jobbResz{
+    margin: 10px;
+    padding-left: 15px;
+}
+
+.movieCards{
     margin-right: 25%;
+    margin-left: 25%;
+    border-bottom: 1px solid rgb(49, 47, 47);
+    padding: 30px;
+}
+
+.movieCardContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+.idopontok{
+    display: flex;
+    flex-direction: row;
+}
+
+.idopont{
+    border: 1px solid orange;
+    border-radius: 6px;
+    background-color: orange;
+    color: black;
+    padding: 8px 13px;
+    justify-content: center;
+    margin: 5px;
+    cursor: pointer;
+}
+
+.idopont:hover{
+    background-color: rgb(168, 109, 0);
+}
+
+.d{
+    font-weight: bold
+}
+
+.korhatarok{
+    width: 25px;
+    margin: 10px;
+}
+
+.filmNev{
+    cursor: pointer;
+    font-size: 19px;
+    text-transform: uppercase ;
+    font-weight: bold;
+}
+
+.filmNev:hover{
+    color: orange;
 }
 
 /* footer */
@@ -146,23 +203,41 @@ footer{
 .footerContainer{
     padding-top: 30px;
     padding-bottom: 70px;
-    display: flex;
     justify-content: center;
+    align-content: center;
+    align-items: center;
+    margin: 0 auto;
+    display: flex;
+}
+
+.footerContainer ul li{
+    list-style-type: none;
+    font-size: 15px;
+}
+
+.footerContainer ul{
+    text-align: left;
+    padding: 0;
+}
+
+.footerContainer h3{
+    font-size: 20px;
 }
 
 
 /* hamburger menu */
 .hbm{
     display: none;
+
 }
 
 :root {
-    --bar-width: 50px;
-    --bar-height: 8px;
-    --hamburger-gap: 6px;
+    --bar-width: 40px;
+    --bar-height: 6px;
+    --hamburger-gap: 5px;
     --foreground: orange;
     --background: black;
-    --hamburger-margin: 25px;
+    --hamburger-margin: 30px;
     --animation-timing: 200ms ease-in-out;
     --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
 }
@@ -247,7 +322,7 @@ footer{
 }
 
 .hamburgerMenuk{
-    padding: 5px;
+    padding: 6px;
     border: 1px solid rgb(150, 124, 77);
     border-top: none;
     border-right: none;
@@ -269,11 +344,41 @@ footer{
     .flex-container div {
         width: 15.1%;
     }
+    .filmKep{
+        width: 180px;
+    }
+    .movieCards{
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+    .footerContainer{
+        margin-right: 15%;
+        margin-left: 15%;
+    }
+}
+
+@media (width <= 1335px) {
+    .filmKep{
+        width: 160px;
+    }
 }
 
 @media (width <= 970px) {
     .flex-container div {
         font-size: 15px;
+    }
+    .filmKep{
+        width: 140px;
+    }
+    .movieCards{
+        margin-right: 10px;
+        margin-left: 10px;
+    }
+    .footerContainer{
+        margin-right: 10px;
+        margin-left: 10px;
+        justify-content: center;
+        align-content: center;
     }
 }
 
@@ -281,14 +386,9 @@ footer{
     .flex-container div {
         font-size: 12px;
     }
+
 }
 
-@media (width <= 990px) {
-    .footerContainer{
-        padding-left: 25%;
-        padding-right: 25%;
-    }
-}
 
 @media (width <= 770px) {
     .flex-container{
@@ -303,7 +403,37 @@ footer{
     .hbm{
         display: flex;
     }
+    .movieCardContainer{
+        flex-direction: column;
+    }
+    .jobbResz{
+        padding: 0px;
+    }
 
+}
+
+@media (width <= 767px){
+    .footerContainer{
+        margin-left: 23%;
+    }
+}
+
+@media (width <= 575px){
+    .footerContainer{
+        margin-left: 32%;
+    }
+}
+
+
+
+
+@media (width <= 490px){
+    .logoKep{
+        width: 200px;
+    }
+    .logo{
+        padding-top: 10px;
+    }
 }
 
 
